@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    // "lib": ["es6"],
+    "outDir": "dist",
+    "sourceMap": false,
+    "strict": true,
+    // "rootDir": ".",
+    // "typeRoots": ["src/customTypings", "node_modules/@types"],
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "jsx": "react",
+    "esModuleInterop": true,
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["src/*"],
+      "@@/*": ["src/.umi/*"]
+    },
+    "allowSyntheticDefaultImports": true
+  },
+  "exclude": ["./node_modules", ".vscode-test"]
+}

@@ -1,0 +1,47 @@
+{
+  // Place your kk-hooks 工作区 snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and
+  // description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope
+  // is left empty or omitted, the snippet gets applied to all languages. The prefix is what is
+  // used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+  // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders.
+  // Placeholders with the same ids are connected.
+  // Example:
+  // "Print to console": {
+  // 	"scope": "javascript,typescript",
+  // 	"prefix": "log",
+  // 	"body": [
+  // 		"console.log('$1');",
+  // 		"$2"
+  // 	],
+  // 	"description": "Log output to console"
+  // }
+
+  "export default index": {
+    "scope": "javascript,typescript",
+    "prefix": "dfi",
+    "body": [
+      "import ${TM_DIRECTORY/^.+\\\\(.*)$/$1/} from './${TM_DIRECTORY/^.+\\\\(.*)$/$1/}';",
+      "",
+      "export { ${TM_DIRECTORY/^.+\\\\(.*)$/$1/} as default };",
+      ""
+    ],
+    "description": "默认导出的入口文件格式"
+  },
+  "default init hook file": {
+    "scope": "javascript,typescript",
+    "prefix": "dihf",
+    "body": [
+      "import React, { ${1:useState} } from 'react';",
+      "",
+      "interface I${TM_DIRECTORY/^.+\\\\(.*)$/$1/}Type {}",
+      "",
+      "function ${TM_DIRECTORY/^.+\\\\(.*)$/$1/}(props: I${TM_DIRECTORY/^.+\\\\(.*)$/$1/}Type) {",
+      "  ${2}",
+      "  return { }",
+      "}",
+      "",
+      "export default ${TM_DIRECTORY/^.+\\\\(.*)$/$1/};"
+    ],
+    "description": "默认钩子文件初始化内容"
+  }
+}
